@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .clinic-button {
+            display: inline-block;
+            width: 200px;
+            padding: 15px;
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        .clinic-button:hover {
+            background-color: #45a049;
+        }
+        .clinic-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .clinic-container {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        .clinic-label {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select Dental Clinic Size</h1>
+
+    <div class="clinic-container">
+        <img class="clinic-img" src="https://via.placeholder.com/100?text=Small+Clinic" alt="Small Dental Clinic">
+        <br>
+        <button class="clinic-button" id="smallClinic">Small Dental Clinic</button>
+        <p class="clinic-label">Small Clinic</p>
+    </div>
+
+    <div class="clinic-container">
+        <img class="clinic-img" src="https://via.placeholder.com/100?text=Medium+Clinic" alt="Medium Dental Clinic">
+        <br>
+        <button class="clinic-button" id="mediumClinic">Medium Dental Clinic</button>
+        <p class="clinic-label">Medium Clinic</p>
+    </div>
+
+    <div class="clinic-container">
+        <img class="clinic-img" src="https://via.placeholder.com/100?text=Large+Clinic" alt="Large Dental Clinic">
+        <br>
+        <button class="clinic-button" id="largeClinic">Large Dental Clinic</button>
+        <p class="clinic-label">Large Clinic</p>
+    </div>
+
+    <script>
+        document.getElementById("smallClinic").onclick = function() {
+            miro.board.viewport.zoomToObject('smallClinicFrame');
+        };
+        document.getElementById("mediumClinic").onclick = function() {
+            miro.board.viewport.zoomToObject('mediumClinicFrame');
+        };
+        document.getElementById("largeClinic").onclick = function() {
+            miro.board.viewport.zoomToObject('largeClinicFrame');
+        };
+    </script>
+
+</body>
+</html>
